@@ -15,10 +15,7 @@
             font-size:50px;
             font-family:serif;
         }
-      
-        .dropdown-menu{
-            max-width:fit-content;
-        }
+        
        #w{
         color: white;
         font-size:20px;
@@ -26,9 +23,6 @@
        margin: 0px 40px;
         text-decoration:none;
        }
-        ul{
-            max-width:fit-content;
-        }
         button{
             background-color: black;
             border: none;
@@ -49,11 +43,13 @@
             color:rgb(12, 44, 201);
             font-size: 20px;
             font-family:serif;
-            margin-left:0px;
-            margin-right: 0px;
+            
         }
         #p{
             background-color:black;
+            margin:0px 20px;
+            min-width: 0px;      
+
         }
         #class:hover{
             background-color:rgb(95, 93, 91);
@@ -186,7 +182,10 @@
        margin: 0px;
        
     }
-
+      ul{
+        max-width: fit-content;
+        display:inline-block;
+      }
     #cs{
       background-color: #4caf50;
       color: white;
@@ -204,17 +203,20 @@
     #result {
       margin-top: 20px;
       font-weight: bold;
-      color: #fff;
+      color: #fff;        
       background-color: cadetblue;
     }
     #pv{
         font-size:30px;
     }
-        #hola{
-               background-color: black;
+    .dropdown-menu{
+           max-width: fit-content;     
+    }
+    #hola{
+        background-color: black;
         padding:10px 0px;
         margin:0px 0px;
-        }
+    }
     </style>
   <script>
     $(document).ready(function() {
@@ -236,7 +238,7 @@
 <body>
     <h1>Educare</h1>
    
-        <div id="hola">
+       <div id="hola">
         <div class="dropdown">
           <button data-toggle="dropdown">Class
          </button>
@@ -271,7 +273,7 @@
                 <div class="dropdown">
                     <button data-toggle="dropdown">Ncert Solution
                    </button>
-                    <ul class="dropdown-menu" >
+                    <ul class="dropdown-menu" id="p">
                       <li><a href="#" id="class"> Ncert Class:09</a></li>
                       <li><a href="#"  id="class">Ncert Class:10</a></li>
                       <li><a href="#"  id="class">Ncert Class:11</a></li>
@@ -281,7 +283,7 @@
                     <div class="dropdown">
                         <button data-toggle="dropdown">Revision Notes
                        </button>
-                        <ul class="dropdown-menu" id="p">
+                        <ul class="dropdown-menu">
                           <li><a href="#" id="class"> Notes Class:09</a></li>
                           <li><a href="#"  id="class">Notes Class:10</a></li>
                           <li><a href="#"  id="class">Notes Class:11</a></li>
@@ -297,7 +299,10 @@
                            <li><a href="#"  id="class">Notes Class:11</a></li>
                            <li><a href="#"  id="class">Notes Class:12</a></li>
                     </div>
-        </div>
+                    <div>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
                     <h1 id="pt">Welocome to Educare!</h1>
                     <p id="para">Welcome to Educare , where learning knows no bounds. Our platform is designed to empower individuals of all ages on their educational journey. Whether you're a student seeking academic support, a teacher looking for innovative resources, or an enthusiast eager to explore new topics, we've got you covered.
 
